@@ -11,7 +11,7 @@ import requests
 
 def help_opts():
     '''Script help'''
-    print("nxcget.py -h [-l <output-files>] [[-f <input-files>] -g <local folder>] -a <username>:<pass> -s <since-date> -u <until-date> -o <nextcloud file> <nextcloud folder>")
+    print("nxcget.py -h -v [-l <output-files>] [[-f <input-files>] -g <local folder>] -a <username>:<pass> -s <since-date> -u <until-date> -o <nextcloud file> <nextcloud folder>")
     print("arguments:")
     print("<nextcloud folder>       The NextCloud folder containing the data. The argument")
     print("                         is not needed if the '-f' option is used with '-g'.")
@@ -19,6 +19,9 @@ def help_opts():
     print("")
     print("options:")
     print("-h                       Print this help.")
+    print("-v                       Print verbose output.")
+    print("-o <nextcloud file>      Download <nextcloud file> from NextCloud. This must be")
+    print("                         a single file.")
     print("-l <output-files>        Print the list of files in the folder to the output-files JSON file.")
     print("-f <input-files>         Use as input the JSON file list of files to download.")
     print("-g <local folder>        Download the files to the local folder.")
@@ -247,7 +250,7 @@ if __name__ == "__main__":
         error_flag = True
 
     if error_flag:
-        print("nxcget.py -h [-l <output-files>] [[-f <input-files>] -g <local folder>] -a <username>:<pass> -s <since-date> -u <until-date> <nextcloud folder>")
+        print("nxcget.py -h -v [[-l <output-files>] [[-f <input-files>] -g <local folder>] -a <username>:<pass> -s <since-date> -u <until-date> <nextcloud folder>][-o <nextcloud file>]")
         sys.exit(2)
  
     if infile_flag:
