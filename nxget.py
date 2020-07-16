@@ -11,7 +11,7 @@ import requests
 
 def help_opts():
     '''Script help'''
-    print("nxcget.py -h -v [-l <output-files>] [[-f <input-files>] -g <local folder>] -a <username>:<pass> -s <since-date> -u <until-date> -o <nextcloud file> <nextcloud folder>")
+    print("nxget.py -h -v [-l <output-files>] [[-f <input-files>] -g <local folder>] -a <username>:<pass> -s <since-date> -u <until-date> -o <nextcloud file> <nextcloud folder>")
     print("arguments:")
     print("<nextcloud folder>       The NextCloud folder containing the data. The argument")
     print("                         is not needed if the '-f' option is used with '-g'.")
@@ -165,7 +165,7 @@ if __name__ == "__main__":
                                    ["list=", "files=", "get=", "auth=",
                                     "since=", "until=", "onefile="])
     except getopt.GetoptError:
-        print("nxcget.py -h -v [[-l <output-files>] [[-f <input-files>] -g <local folder>] -a <username>:<pass> -s <since-date> -u <until-date> <nextcloud folder>][-o <nextcloud file>]")
+        print("nxget.py -h -v [[-l <output-files>] [[-f <input-files>] -g <local folder>] -a <username>:<pass> -s <since-date> -u <until-date> <nextcloud folder>][-o <nextcloud file>]")
         sys.exit(2)
 
     for opt, arg in OPTS:
@@ -250,7 +250,7 @@ if __name__ == "__main__":
         error_flag = True
 
     if error_flag:
-        print("nxcget.py -h -v [[-l <output-files>] [[-f <input-files>] -g <local folder>] -a <username>:<pass> -s <since-date> -u <until-date> <nextcloud folder>][-o <nextcloud file>]")
+        print("nxget.py -h -v [[-l <output-files>] [[-f <input-files>] -g <local folder>] -a <username>:<pass> -s <since-date> -u <until-date> <nextcloud folder>][-o <nextcloud file>]")
         sys.exit(2)
  
     if infile_flag:

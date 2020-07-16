@@ -16,7 +16,7 @@ This should result in your local python3 being ready to use.
 ## Usage
 
 ```
-nxcget.py -h -v [-l <output-files>] [[-f <input-files>] -g <local folder>] -a <username>:<pass> -s <since-date> -u <until-date> -o <nextcloud file> <nextcloud folder>
+nxget.py -h -v [-l <output-files>] [[-f <input-files>] -g <local folder>] -a <username>:<pass> -s <since-date> -u <until-date> -o <nextcloud file> <nextcloud folder>
 
 Arguments:
 <nextcloud folder>       The NextCloud folder containing the data. The argument is not needed if the '-f' option is used with '-g'.
